@@ -102,5 +102,3 @@ An AI-powered dashboard that analyzes student data and gives personalized insigh
 - 📈 Beautiful visuals via matplotlib/plotly
 
 ---
-
-## 📂 Folder Structure (suggested)
