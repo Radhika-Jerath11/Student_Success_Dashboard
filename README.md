@@ -102,3 +102,45 @@ An AI-powered dashboard that analyzes student data and gives personalized insigh
 - 📈 Beautiful visuals via matplotlib/plotly
 
 ---
+## 🛠️ Setup Instructions
+
+### 1️⃣ Prerequisites
+
+- Python 3.9+
+- Node.js (for frontend if needed)
+- Azure account with:
+  - Blob Storage
+  - Azure ML Workspace
+  - Azure SQL
+  - Azure Functions
+  - Azure App Service
+
+---
+
+### 2️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+
+3️⃣ Set Up Virtual Environment
+python -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+4️⃣ Configure Environment Variables
+Create a .env file in the root directory:
+AZURE_STORAGE_KEY=your_key
+AZURE_STORAGE_ACCOUNT=your_account
+AZURE_SQL_CONNECTION_STRING=your_connection_string
+AZURE_ML_ENDPOINT=your_endpoint_url
+TEAMS_WEBHOOK_URL=your_webhook_url
+
+5️⃣ Run Django Backend
+python manage.py migrate
+python manage.py runserver
+
+6️⃣ Launch Streamlit Dashboard
+cd dashboard
+streamlit run app.py
+
